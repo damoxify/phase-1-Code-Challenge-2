@@ -1,5 +1,6 @@
 const animalListContainer = document.querySelector('.animal-list');
 const animalDetailsContainer = document.querySelector('.animal-details');
+const animalForm = document.querySelector('#animal-form');
 
 // To fetch animals data from the local server
 function fetchAnimals() {
@@ -88,6 +89,50 @@ function updateAnimalVotes(animalId, votes) {
         console.log(error);
     });
 }
+
+// Add event handling for the form submission
+animalForm.addEventListener('submit', event => {
+    event.preventDefault();
+    const nameInput = document.querySelector('#animal-name');
+    const imageInput = document.querySelector('#animal-image');
+
+    const newAnimal = {
+        name: nameInput.value,
+        image: imageInput.value,
+        votes: 0
+    };  
+
+    addAnimal(newAnimal)
+        .then(() => {
+            nameInput.value = '';
+            imageInput.value = '';
+            displayAnimalList(); // Refresh the list after adding an animal
+        });
+});
+
+// ... existing code ...
+
+// Add a new animal to the server
+function addAnimal(animal) {
+    return fetch('http://localhost:3000/characters', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(animal)
+    })
+    .then(response => {
+        if (!response.ok) {
+            console.log('Failed to add animal');
+        }
+    })
+    .catch(error => {
+        console.log(error);
+    });
+}
+
+// ... existing code ...
+
 
 // To start the app
 displayAnimalList();
