@@ -7,12 +7,12 @@ function fetchAnimals() {
     return fetch('http://localhost:3000/characters')
         .then(response => {
             if (!response.ok) {
-                throw new Error('Failed to fetch animals data');
+                console.log('Failed to fetch animals data');
             }
             return response.json();
         })
         .catch(error => {
-            console.error(error);
+            console.log(error);
             return [];
         });
 }
