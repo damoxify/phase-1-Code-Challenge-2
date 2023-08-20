@@ -27,6 +27,15 @@ To get started with Flatacuties, follow these steps:
 - View a list of all animal names.
 - Click on an animal's name to see its details, including the image and number of votes.
 - Vote for your favorite animal, and the vote count will be displayed in real-time.
+- Add new animals using the provided form.
+
+
+# Adding New Animals
+1. Open the app in your web browser.
+2. Scroll down to the "Add New Animal" section.
+3. Fill in the name and image URL of the new animal.
+4. Click the "Add Animal" button to add the new animal to the list.
+5. The new animal will appear in the list, and you can click on its name to view details and vote.
 
 ## Technologies Used
 
