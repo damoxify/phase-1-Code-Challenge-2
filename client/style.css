@@ -1,0 +1,60 @@
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(90deg, rgb(43, 34, 205) 0%, rgb(190, 190, 250) 30%, rgba(0,212,255,1) 100%);
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 8px;
+}
+
+.animal-list {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+
+}
+
+.animal-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.animal-card:hover {
+    background-color: #e0e0e0;
+}
+
+.animal-details {
+    margin: 20px;
+    display: none;
+}
+
+.animal-details img {
+    max-width: 200px;
+    height: auto;
+    margin: 10px;
+}
+
+.vote-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 8px;
+}
