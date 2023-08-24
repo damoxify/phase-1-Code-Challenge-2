@@ -17,7 +17,7 @@ function fetchAnimals() {
         });
 }
 
-// Display animal cards in the list
+// To display animal cards in the list
 function displayAnimalList() {
     fetchAnimals()
         .then(animals => {
@@ -46,8 +46,8 @@ function displayAnimalDetails(animal) {
         <button class="reset-btn">Reset Votes</button>
         <button class="vote-btn">Vote</button>
     `;
-    
-    // To update the vote count
+
+// To update the vote count
     const voteBtn = animalDetailsContainer.querySelector('.vote-btn');
     voteBtn.addEventListener('click', () => {
         animal.votes++;
@@ -110,7 +110,6 @@ animalForm.addEventListener('submit', event => {
         });
 });
 
-// ... existing code ...
 
 // Add a new animal to the server
 function addAnimal(animal) {
@@ -131,7 +130,6 @@ function addAnimal(animal) {
     });
 }
 
-// ... existing code ...
 
 
 // To start the app
